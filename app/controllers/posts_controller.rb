@@ -16,6 +16,7 @@ class PostsController < ApplicationController
       redirect_to root_path, notice:  "Post was successfully created."
     else
       render 'new'
+    end
   end
 
   private

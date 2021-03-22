@@ -1,17 +1,16 @@
 class PostsController < ApplicationController
   before_action  only: [:new, :create]
-
+  
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
   
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
  
-
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to root_path, notice:  "Post was successfully created."
     else
@@ -20,6 +19,7 @@ class PostsController < ApplicationController
   end
 
   private
+
 
   def post_params 
     params.require(:post).permit(:title, :body)

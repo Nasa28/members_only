@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.my_form {
+    margin: 0 auto;
+}
+.my_index {
+
+    text-align: center;
+}

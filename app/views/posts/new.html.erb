@@ -10,9 +10,10 @@
       </ul>
     </div>
   <% end %>
-  <%= form.text_field :title %>
-  <%= form.text_area :body, size: "60x10" %>
+  <div class = "col-5">
+  <%= form.text_field :title, placeholder: "Title", class: "form-control"%> <br>
+  <%= form.text_area :body, size: "10x5", placeholder: "Type your post here...", class: "form-control"%><br>
   <%= form.submit %>
 <% end %>
+</div>
 
-<%= link_to "Sign_up", new_user_registration_path%>

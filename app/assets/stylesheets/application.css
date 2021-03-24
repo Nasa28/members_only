@@ -14,13 +14,13 @@
  *= require_self
  */
 .my_form {
-    margin: 0 auto;
+  margin: 0 auto;
 }
-.my_index {
 
-    text-align: center;
+.my_index {
+  text-align: center;
 }
 
 .color {
-    background-color: rgb(54, 29, 27);
+  background-color: rgb(54, 29, 27);
 }

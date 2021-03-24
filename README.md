@@ -33,9 +33,7 @@ git clone git@github.com:Nasa28/members_only.git
 ### Usage
 
 - To test the Models using the console run `rails c`.
-- To edit user, naviagate to `server-ip/:id/edit`
-- `server-ip` could be `127.0.0.1:3000` and `id` is the user id
-- GO to your browser and paste this address: http://127.0.0.1:3000/.
+- Go to your browser and paste this address: http://127.0.0.1:3000/.
 - Signup and start creating your posts.
 
 ## Author 

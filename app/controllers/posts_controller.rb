@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :signed_in_only, only: %i[new create]
   before_action :authenticate_user!, only: %i[new create]
+
   def new
     @post = current_user.posts.build
   end
@@ -20,12 +21,9 @@ class PostsController < ApplicationController
 
   private
 
-   def signed_in_only
-    unless current_user
-      flash[:error] = "You must be logged to proceed"
-      redirect_to new_user_session_path
-    end
-   end
+  def signed_in_only
+    redirect_to new_user_session_path unless current_user
+  end
 
   def post_params
     params.require(:post).permit(:title, :body)

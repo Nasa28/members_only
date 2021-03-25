@@ -25,16 +25,19 @@ To get a local copy up and running follow these simple steps.
 git clone git@github.com:Nasa28/members_only.git
 ```
 - Open a terminal and `cd` to the cloned repository.
-- Run `bundle install` to install the dependencies.
-- Run `db:create` to create the database
-- Run `bin/rails db:migrate` to migrate the database.
-- Run the server using `rails s`
+- Run `bundle install`
+- Run `rails db:migrate` 
+
 
 ### Usage
 
-- To test the Models using the console run `rails c`.
-- Go to your browser and paste this address: http://127.0.0.1:3000/.
-- Signup and start creating your posts.
+- Run the server using `rails s`
+- In your browser, go to http://127.0.0.1:3000
+- Click Signup to create a user profile before you can create a post
+- SignIn and click on Make a post to create a post
+- Click on Home to view all posts
+- To test the Models using the console run `rails c`
+
 
 ## Author 
 

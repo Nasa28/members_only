@@ -1,0 +1,19 @@
+<%= form_with model: @post do |form| %>
+<% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being processed:</h2>
+
+      <ul>
+        <% @post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class = "col-5">
+  <%= form.text_field :title, placeholder: "Title", class: "form-control"%> <br>
+  <%= form.text_area :body, size: "10x5", placeholder: "Type your post here...", class: "form-control"%><br>
+  <%= form.submit %>
+<% end %>
+</div>
+

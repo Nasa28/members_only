@@ -1,0 +1,12 @@
+<div class="my_index">
+<h1>List of posts</h1>
+
+<% @posts.each do |post|%>
+<div class="container ">
+          <strong>Posted by: <%= post.user.name if user_signed_in?%><strong><br>
+          <p><%= post.title%> </p>
+          <p><%= post.body%> </p>
+        </div>
+<%end%>
+
+</div>
